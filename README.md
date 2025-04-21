@@ -26,3 +26,15 @@
 <p>
   Go ahead and log into both the Client-1 and DC-1 virtual machines created in the Active Directory lab as the janeadmin user. Once in the client-1 machine, open Powershell as an administrator and attempt to "ping mainframe". The computer will then first check the local DNS cache (fastest), then the local host (faster), and finally the DNS server (slowest). The ping will fail because "mainframe" will not be located in any of these locations. 
 </p>
+<p>
+<img src="DNS-image1.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<br>
+
+<p>
+  Now in Powershell, run the command ipconfig/displaydns. This will display the DNS cache, and there is no entry for "mainframe" in the cache.
+</p>
+<p>
+  <img src="DNS-image2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+
