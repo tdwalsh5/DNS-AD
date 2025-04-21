@@ -35,6 +35,6 @@
   Now in Powershell, run the command ipconfig/displaydns. This will display the DNS cache, and there is no entry for "mainframe" in the cache.
 </p>
 <p>
-  <img src="DNS-image2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  <img src="dns-image2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
