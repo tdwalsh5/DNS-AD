@@ -37,4 +37,9 @@
 <p>
   <img src="dns-image2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
+<br>
+
+<p>
+  To check the local host file, open notepad as an administrator. Go to file -> open -> for file type, select "All Files" -> Navigate to Windows -> System32 -> drivers -> etc -> hosts. This is the local hosts file, where you can store stuff to map an IP address to a host name. "mainframe" is not listed here.
+</p>
 
