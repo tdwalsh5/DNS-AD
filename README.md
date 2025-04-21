@@ -56,9 +56,6 @@
   Next, run <code>nslookup mainframe</code> in PowerShell. 
   Again, no results will be found because no DNS record exists yet.
 </p>
-<p>
-  <img src="dns-image3.png" height="80%" width="80%" alt="NSLookup Failure"/>
-</p>
 <br>
 
 <p>
@@ -68,7 +65,7 @@
   Enter <strong>mainframe</strong> as the name and <strong>10.0.0.4</strong> (DC-1's IP address) for the IP, then save the record.
 </p>
 <p>
-  <img src="dns-image4.png" height="80%" width="80%" alt="Creating A Record"/>
+  <img src="dns-image3.png" height="80%" width="80%" alt="NSLookup Failure"/>
 </p>
 <br>
 
@@ -77,7 +74,7 @@
   This time, the ping will succeed because the DNS server now resolves "mainframe."
 </p>
 <p>
-  <img src="dns-image5.png" height="80%" width="80%" alt="Ping Successful After A Record"/>
+  <img src="dns-image4.png" height="80%" width="80%" alt="Ping Successful After A Record"/>
 </p>
 <br>
 
@@ -87,10 +84,10 @@
   It will still show the old IP address because Client-1 cached the previous DNS entry.
 </p>
 <p>
-  <img src="dns-image6.png" height="80%" width="80%" alt="Stale DNS Cache 1"/>
+  <img src="dns-image5.png" height="80%" width="80%" alt="Stale DNS Cache 1"/>
 </p>
 <p>
-  <img src="dns-image7.png" height="80%" width="80%" alt="Stale DNS Cache 2"/>
+  <img src="dns-image6.png" height="80%" width="80%" alt="Stale DNS Cache 2"/>
 </p>
 <br>
 
@@ -98,13 +95,16 @@
   Run <code>ipconfig /displaydns</code> again on Client-1 and locate the "mainframe" entry, which still points to the old IP (10.0.0.4).
 </p>
 <p>
-  <img src="dns-image8.png" height="80%" width="80%" alt="Checking DNS Cache"/>
+  <img src="dns-image7.png" height="80%" width="80%" alt="Checking DNS Cache"/>
 </p>
 <br>
 
 <p>
   Clear the DNS cache by running <code>ipconfig /flushdns</code> on Client-1.
   This clears the old entry and forces Client-1 to query the DNS server again, reflecting the new IP (8.8.8.8).
+</p>
+<p>
+  <img src="dns-image8.png" height="80%" width="80%" alt="Flushing DNS Cache"/>
 </p>
 <p>
   <img src="dns-image9.png" height="80%" width="80%" alt="Flushing DNS Cache"/>
